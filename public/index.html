@@ -10,4 +10,34 @@
 
 <script src="js/bundle.js"></script>
 
+<script>
+
+  'use strict';
+
+  function outer() {
+
+    console.log(this);
+
+
+    const inner = () => {
+      console.log(this);
+    };
+
+    inner();
+  }
+
+  // outer();
+  // window.outer();
+
+  const o = {
+    id: 2,
+    outer: outer,
+  };
+
+  o.outer();
+
+  // console.log(outer === o.outer);
+
+</script>
+
 
