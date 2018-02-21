@@ -1,47 +1,45 @@
 
-// pyramid of doom
-// setTimeout(function() {
+const youngMan = new Promise(function youngLady(resolve, reject) {
 
-//         console.log('do this first');
+  setTimeout(function() {
+    reject('yes, I will marry you because I am madly in love with you...');
+  }, 2000);
 
-//         setTimeout(function() {
+});
 
-//                 console.log('do this second');
+youngMan.then(result => {
+  console.log(result);
+  console.log('yay! she said yes!');
 
-//                 setTimeout(function() {
+  console.log('time to look for a place!');
+  return new Promise( (resolve) => {
+    setTimeout(() => {
+      resolve('found a place to get married!');
+    }, 2000);
+  });
 
-//                         console.log('do this third');
-                
-//                 }, 500);    
-        
-//         }, 1000);
+}).then(result => {
 
-// }, 2000);
+  console.log(result);
 
+  console.log('time to find wedding garments!');
+  return new Promise( (resolve, reject) => {
+    setTimeout(() => {
+      reject('found wedding garments!');
+    }, 2000);
+  });
+  
+}).then(result => {
 
+  console.log(result);
 
-function allDone() {
-  console.log('all done');
-}
+}).catch(result => {
+  console.log(result);
+  console.log('time to sign up for eHarmony');
 
+});
 
-setTimeout(function() {
-  console.log('a');
-}, 2000);
-
-setTimeout(function() {
-  console.log('b');
-}, 4000);
-
-setTimeout(function() {
-  console.log('c');
-}, 1000);
-
-// write me some code which will ensure all three set timeouts have completed and then run
-// the allDone function
-
-// do not wrap the allDone function in a setTimeout call with something like 5000
-
+console.log('young man is waiting...')
 
 
 
