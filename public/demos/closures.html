@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<title>Welcome to Introduction to ES2017!</title>
+<link rel="icon" href="data:,">
+<link href="css/site.css" rel="stylesheet">
+
+<main>
+  <h1>Welcome to Introduction to ES2017 for React + GraphQL Developers!</h1>
+</main>
+
+<script src="js/bundle.js"></script>
+
+<script>
+
+  'use strict';
+
+  // var t = 2;
+
+  // function doIt() {
+  //   console.log(t);
+  // }
+
+  // console.dir(doIt);
+
+
+
+  function outer() {
+
+    var t = 4;
+
+    setTimeout(function() {
+      t = 8;
+    }, 2000);
+
+    return function inner() {
+      console.log(t);
+    };
+  }
+
+  const fn = outer();
+
+  fn();
+
+  setTimeout(function() {
+    fn();
+  }, 4000);
+
+
+</script>
+
+

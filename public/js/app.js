@@ -1,22 +1,52 @@
-// 'use strict';
 
-// // const dest = {};
+// pyramid of doom
+// setTimeout(function() {
 
-// const source = {
-//   msg: 'test',
-//   data: 2,
-//   t: 'y',
-//   u: false,
-// };
+//         console.log('do this first');
 
-// const source2 = {
-//   data: 5,
-// };
+//         setTimeout(function() {
+
+//                 console.log('do this second');
+
+//                 setTimeout(function() {
+
+//                         console.log('do this third');
+                
+//                 }, 500);    
+        
+//         }, 1000);
+
+// }, 2000);
 
 
-// // Object.assign(dest, source, source2);
-// // console.dir(dest);
 
-// const dest = { ...source, ...source2 };
+function allDone() {
+  console.log('all done');
+}
 
-// console.log(dest);
+
+setTimeout(function() {
+  console.log('a');
+}, 2000);
+
+setTimeout(function() {
+  console.log('b');
+}, 4000);
+
+setTimeout(function() {
+  console.log('c');
+}, 1000);
+
+// write me some code which will ensure all three set timeouts have completed and then run
+// the allDone function
+
+// do not wrap the allDone function in a setTimeout call with something like 5000
+
+
+
+
+
+
+
+
+
