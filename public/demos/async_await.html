@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<title>Welcome to Introduction to ES2017!</title>
+<link rel="icon" href="data:,">
+<link href="css/site.css" rel="stylesheet">
+
+<main>
+  <h1>Welcome to Introduction to ES2017 for React + GraphQL Developers!</h1>
+</main>
+
+<script src="js/bundle.js"></script>
+
+<script>
+
+  'use strict';
+
+  const getCars2 = () =>
+    fetch('http://localhost:3010/cars')
+      .then(res => res.json());
+
+
+  // you must specify async to use await in the function
+  // all async functions return promises 
+  const getCars = async () => {
+
+    // call await on anything that returns a promise
+    const res = await fetch('http://localhost:3010/cars');
+    const cars = await res.json();
+
+    return cars;
+  };
+
+  getCars2().then(cars => console.log(cars));
+
+</script>
+
+

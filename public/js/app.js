@@ -1,33 +1,15 @@
 
-console.log(Promise.resolve('some data'));
-// console.log(Promise.reject('some data'));
 
+// const person = {
+//   firstName: 'Bob',
+//   lastName: 'Smith',
+// };
 
-// function getCarData() {
+const firstName = 'Manasa';
 
-//   return new Promise(resolve => {
-
-//     setTimeout(function() {
-//       resolve([{ make:'Audi' }]);
-//     }, 2000);
-
-//   });
-
-// }
-
-function getMockCarData() {
-  return Promise.resolve([{ make:'Tesla' }]);
+const printName = ({ firstName }, param2, param3) => {
+  console.log(firstName);
 }
 
-getMockCarData().then(cars => console.log(cars));
+printName({ firstName });
 
-
-
-
-const hare = new Promise( (resolve, reject) => {
-
-  setTimeout(() => {
-    resolve('hare');
-  }, 4000)
-
-} );
