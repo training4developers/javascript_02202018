@@ -7,6 +7,8 @@
 
 const firstName = 'Manasa';
 
+// parameter = argument
+
 const printName = ({ firstName }, param2, param3) => {
   console.log(firstName);
 }
